@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-charcoal bg-cream antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-charcoal;
+  }
+}
+
+@layer components {
+  /* ── Buttons ────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-500 text-white text-sm font-semibold rounded-lg hover:bg-amber-600 transition-all duration-200 whitespace-nowrap shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-navy text-white text-sm font-semibold rounded-lg hover:bg-navy-800 transition-all duration-200 whitespace-nowrap;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-navy text-sm font-semibold rounded-lg border border-surface-border hover:border-navy hover:bg-cream transition-all duration-200 whitespace-nowrap;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-navy text-sm font-semibold rounded-lg border border-navy hover:bg-navy hover:text-white transition-all duration-200 whitespace-nowrap;
+  }
+
+  /* ── Labels ─────────────────────────────────────── */
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.15em] uppercase text-forest-600;
+  }
+
+  .section-label-light {
+    @apply text-xs font-semibold tracking-[0.15em] uppercase text-forest-500;
+  }
+
+  .section-label-amber {
+    @apply text-xs font-semibold tracking-[0.15em] uppercase text-amber-500;
+  }
+
+  /* ── Cards ──────────────────────────────────────── */
+  .card {
+    @apply bg-white border border-surface-border rounded-xl p-6 hover:shadow-md transition-shadow duration-300;
+  }
+
+  .card-navy {
+    @apply bg-navy border border-white/10 rounded-xl p-6;
+  }
+
+  /* ── Input ──────────────────────────────────────── */
+  .input {
+    @apply w-full px-4 py-3 bg-white border border-surface-border rounded-lg text-charcoal text-sm placeholder:text-charcoal-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-charcoal mb-1.5;
+  }
+
+  /* ── Prose (article body) ───────────────────────── */
+  .prose-fire {
+    @apply prose prose-slate max-w-none
+      prose-headings:font-display prose-headings:font-bold prose-headings:text-charcoal
+      prose-p:text-charcoal-600 prose-p:leading-relaxed
+      prose-a:text-forest-600 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-charcoal
+      prose-li:text-charcoal-600
+      prose-blockquote:border-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:text-charcoal-600
+      prose-code:text-forest-700 prose-code:bg-forest-50 prose-code:rounded prose-code:px-1;
+  }
+
+  /* ── Affiliate disclosure ───────────────────────── */
+  .disclosure-banner {
+    @apply bg-amber-50 border border-amber-100 rounded-lg px-4 py-3 text-xs text-charcoal-600 leading-relaxed;
+  }
+
+  /* ── Stat callout ───────────────────────────────── */
+  .stat-number {
+    @apply font-display text-display-lg font-bold text-amber-500;
+  }
+}
