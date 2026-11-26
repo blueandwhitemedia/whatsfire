@@ -19,7 +19,7 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://whatsfire.com'),
   title: {
-    default: "What's FIRE? — Financial Independence & Early Retirement Guide",
+    default: "What's FIRE? Financial Independence and Early Retirement Guide",
     template: "%s | What's FIRE?",
   },
   description:
